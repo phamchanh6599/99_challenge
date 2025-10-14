@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# 🪙 Token Swap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Exchange tokens instantly at the best rates.  
+This project provides a clean and modern token swap interface built with **React + Vite**, styled using **Tailwind CSS**, and powered by live crypto price data.
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+---
 
-Currently, two official plugins are available:
+## 📂 Folder Structure
+```
+src/
+├── components/
+│   ├── atoms/          # Small reusable UI components
+│   ├── molecules/      # Combined UI elements (e.g., input + label)
+│   └── organisms/      # Larger UI blocks or sections
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions (e.g., cn, formatPrice)
+├── types/              # TypeScript definitions
+├── App.tsx
+├── index.css
+└── main.tsx
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+public/
+└── assets/             # Token SVG icons (1INCH.svg, AAVE.svg, etc.)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Install Dependencies
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Make sure you have **pnpm** installed globally:
+```bash
+npm install -g pnpm
 ```
+
+Then install all project dependencies:
+```bash
+pnpm install
+```
+
+---
+
+## 🚀 Run the Development Server
+
+Start the Vite development server:
+```bash
+pnpm dev
+```
+
+Your app will be available at:
+
+👉 **http://localhost:5173**
+
+---
+
+## 🎨 Features
+
+- 🔄 Real-time token swapping interface
+- 💰 Live crypto price data integration
+- 🎯 Clean and intuitive UI/UX
+- 📱 Fully responsive design
+- ⚡ Fast and optimized with Vite
+- 🎨 Styled with Tailwind CSS
+- 🖼️ Dynamic token icons from `/public/assets/`
+
+---
+
+## 🛠️ Tech Stack
+
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first styling
+- **Lucide React** - Icon library
